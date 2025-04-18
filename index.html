@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+        <script src="https://kit.fontawesome.com/b123ee025b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="app">
+            <div class="left">
+                <div class="heading">
+                    <h2 class="head">Splitter
+                </h2>
+                </div>
+                <div class="options">
+                    <ul id="menu-list" class="hidden">
+                        <li class="menu-item">Dashboard</li>
+                        <li class="menu-item">Groups</li>
+                        <li class="menu-item">Friends</li>
+                        <li class="menu-item">Expenses</li>
+                        <li class="menu-item">Settlements</li>
+                        <li class="menu-item">Settings</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="main">
+            <h2>Splitter <div class="hamburger-menu" onclick="toggleMenu()">
+                <i class="fa fa-bars"></i></h2>
+            <div class="nav">
+                <ul class="main-nav">
+                    <a href="#"><li class="navbar">Dashboard</li></a>
+                    <a href="#"><li class="navbar">Groups</li></a>
+                    <a href="#"><li class="navbar">Friends</li></a>
+                    <a href="#"><li class="navbar">Expenses</li></a>
+                    <a href="#"><li class="navbar">Settlements</li></a>
+                    <a href="#"><li class="navbar">Settings</li></a>
+                    <a href="#"><li class="navbar Face" style="display: none;"> <img class="Face" src="face.png"
+                            alt="Profile Picture">
+                        <h4 id="profileName">John Doe</h4>
+                        <button onclick="logout()" class="logoutBtn">Logout</button>
+                    </li></a>
+
+                    <div class="acc"><button class="Login" onclick="openPopup('loginPopup')">Login</button>
+                        <button class="Sign-up" onclick="openPopup('signupPopup')">Signup</button>
+                    </div>
+
+
+                </ul>
+
+                <!--For Nav-->
+            </div>
+
+
+
+            <div class="hero-section">
+                <h4 class="overview">Group Overview</h4>
+                <div class="div-hero">
+                    <div class="con1" id="con12">
+                        <h5>Trip To Beach</h5>
+                        <h6><i class="fa-solid fa-umbrella-beach"></i></h6>
+                        <button class="owed">You are owed ₹1500</button>
+                    </div>
+                    <div class="con1" id="con2">
+                        <h5>Monthly Budget</h5>
+                        <h6><i class="fa-solid fa-indian-rupee-sign"></i></h6>
+                        <button class="owed btn2">You are owed ₹1200</button>
+                    </div>
+                </div>
+
+                <div class="payment">
+                    <h5>Recent Activity</h5>
+
+                    <div class="pay-chat">
+                        <div class="pay1"><img class="pay-1"
+                                src="face.png" alt="">
+                            <h6 class="payby">John Paid ₹500 <br>For Lunch</h6>
+                            <div class="u-owe">You owe ₹250</div>
+                        </div>
+                        <div class="pay1"><img class="pay-1"
+                                src="face.png"><h6 class="payby">Nitin Paid ₹500 <br>For Groceries
+                            </h6>
+                            <div class="u-owe">You owe ₹250</div>
+                        </div>
+                        <div class="pay1"><img class="pay-1"
+                                src="face.png" alt="">
+                            <h6 class="payby">John Paid ₹500 <br>For Lunch</h6>
+                            <div class="u-owe">You owe ₹250</div>
+                        </div>
+                        <div class="pay1"><img class="pay-1"
+                                src="face.png" alt="">
+                            <h6 class="payby">John Paid ₹500 <br>For Lunch</h6>
+                            <div class="u-owe">You owe ₹250</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--For Hero Section-->
+            </div>
+
+
+            <div class="add-exp">
+                <h3 class="Exp">Add Expenses</h3>
+                <div class="title">
+                    <h5>Title</h5>
+                    <input type="text" class="Title-name" placeholder="Enter Title">
+                    <h5>Amount</h5>
+                    <input type="number" class="Title-name" placeholder="Enter Amount">
+                    <h5>Paid by</h5>
+                    <input type="text" class="Title-name" placeholder="Enter name">
+                    <h5>Split Between</h5>
+                    <input type="text" class="Title-name" placeholder="Enter name">
+                    <h5>Date</h5>
+                    <input type="date" class="Title-name" placeholder="Enter Date">
+                    <h5>Notes</h5>
+                    <input type="text" class="Title-name" placeholder="Add an Optional Note">
+
+                    <button class="submit">Add</button>
+                </div>
+            </div>
+            <div class="in-msg">Made with 🧡 </div>
+        </div>
+
+    </div>
+
+    <!--For Login-->
+    <div id="loginPopup" class="popup">
+        <div class="popup-content">
+            <a href="#" class="close-button" onclick="closePopup('loginPopup'); return false;">&times;</a>
+
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="username">Username</label>
+                <input type="text" id="login-username" name="username" required />
+
+                <label for="password">
+                    Password
+                </label>
+                <input type="password" id="login-password" name="password" required />
+
+                <button class="log" type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div id="signupPopup" class="popup">
+        <div class="popup-content">
+            <a href="#" class="close-button" onclick="closePopup('signupPopup'); return false;">&times;</a>
+
+            <h2>Sign-Up</h2>
+            <form id="SigninForm">
+                <label for="username">Username</label>
+                <input type="text" id="signup-username" name="username" required />
+
+                <label for="password">
+                    Password
+                </label>
+                <input type="password" id="signup-password" class="password" required />
+
+                <button class="sign" type="submit">Sign-in</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="message"></div>
+
+
+<script src="script.js"></script>
+</body>
+
+</html>
