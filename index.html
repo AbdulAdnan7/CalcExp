@@ -44,10 +44,12 @@
                     <a href="#"><li class="navbar">Expenses</li></a>
                     <a href="#"><li class="navbar">Settlements</li></a>
                     <a href="#"><li class="navbar">Settings</li></a>
-                    <a href="#"><li class="navbar Face" style="display: none;"> <img class="Face" src="face.png"
+                    <li class="navbar"><input class="friends-i" type="text" placeholder="Search"><button class="F-button">Add</button></li>
+                    <a href="#"><li class="navbar Face"
+                        id="face" style="display: none; margin-left: -350px;"> <img class="Face" src="face.png"
                             alt="Profile Picture">
                         <h4 id="profileName">John Doe</h4>
-                        <button onclick="logout()" class="logoutBtn">Logout</button>
+                        <button onclick="logout()" class="logoutBtn" style="padding: 4px 8px; margin-right: 50px; margin-top: 10px; font-size: 12px;">Logout</button>
                     </li></a>
 
                     <div class="acc"><button class="Login" onclick="openPopup('loginPopup')">Login</button>
@@ -68,12 +70,10 @@
                     <div class="con1" id="con12">
                         <h5>Trip To Beach</h5>
                         <h6><i class="fa-solid fa-umbrella-beach"></i></h6>
-                        <button class="owed">You are owed ₹1500</button>
                     </div>
                     <div class="con1" id="con2">
-                        <h5>Monthly Budget</h5>
-                        <h6><i class="fa-solid fa-indian-rupee-sign"></i></h6>
-                        <button class="owed btn2">You are owed ₹1200</button>
+                        <h5>Monthly Spent</h5>
+                        <h6><i class="fa-solid fa-indian-rupee-sign"><span class="total-amount">0</span></i></h6>
                     </div>
                 </div>
 
@@ -81,26 +81,7 @@
                     <h5>Recent Activity</h5>
 
                     <div class="pay-chat">
-                        <div class="pay1"><img class="pay-1"
-                                src="face.png" alt="">
-                            <h6 class="payby">John Paid ₹500 <br>For Lunch</h6>
-                            <div class="u-owe">You owe ₹250</div>
-                        </div>
-                        <div class="pay1"><img class="pay-1"
-                                src="face.png"><h6 class="payby">Nitin Paid ₹500 <br>For Groceries
-                            </h6>
-                            <div class="u-owe">You owe ₹250</div>
-                        </div>
-                        <div class="pay1"><img class="pay-1"
-                                src="face.png" alt="">
-                            <h6 class="payby">John Paid ₹500 <br>For Lunch</h6>
-                            <div class="u-owe">You owe ₹250</div>
-                        </div>
-                        <div class="pay1"><img class="pay-1"
-                                src="face.png" alt="">
-                            <h6 class="payby">John Paid ₹500 <br>For Lunch</h6>
-                            <div class="u-owe">You owe ₹250</div>
-                        </div>
+                       
                     </div>
                 </div>
 
@@ -112,17 +93,17 @@
                 <h3 class="Exp">Add Expenses</h3>
                 <div class="title">
                     <h5>Title</h5>
-                    <input type="text" class="Title-name" placeholder="Enter Title">
+                    <input type="text" class="Title-name" id="Title-names" placeholder="Enter Title">
                     <h5>Amount</h5>
-                    <input type="number" class="Title-name" placeholder="Enter Amount">
+                    <input type="number" class="Title-name" id="Title-number" placeholder="Enter Amount">
                     <h5>Paid by</h5>
-                    <input type="text" class="Title-name" placeholder="Enter name">
+                    <input type="text" class="Title-name" id="Paid-by" placeholder="Enter name">
                     <h5>Split Between</h5>
-                    <input type="text" class="Title-name" placeholder="Enter name">
+                    <input type="text" class="Title-name" id="Split-with" placeholder="Enter name">
                     <h5>Date</h5>
-                    <input type="date" class="Title-name" placeholder="Enter Date">
+                    <input type="date" class="Title-name" id="Date" placeholder="Enter Date">
                     <h5>Notes</h5>
-                    <input type="text" class="Title-name" placeholder="Add an Optional Note">
+                    <input type="text" class="Title-name" id="Notes" placeholder="Add an Optional Note">
 
                     <button class="submit">Add</button>
                 </div>

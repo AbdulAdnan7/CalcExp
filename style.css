@@ -114,8 +114,14 @@ body {
 .acc {
     display: flex;
     align-items: center;
-    margin-left: 300px;
+    margin-left: -10px;
+    margin-top: -17px;
     gap: 40px;
+}
+
+#profileName {
+    margin-left: 10px;
+    margin-top: -5px;
 }
 
 .acc button {
@@ -182,6 +188,13 @@ body {
     border: none;
     color: #fff;
     border-radius: 2px;
+}
+
+#con12 h6 {
+    margin-top: 40px;
+}
+#con2 h6  {
+   margin-top: 40px;
 }
 
 .payment h5 {
@@ -367,6 +380,21 @@ button {
     display: none;
 }
 
+.green-text {
+    color: green;
+    font-weight: bold;
+}
+
+.navbar input {
+    padding: 10px auto 29px;
+    height: 30px;
+}
+.navbar button {
+    margin-left: 20px;
+    margin-top: 0px;
+    height: 30px;
+}
+
 
 
 
@@ -419,9 +447,15 @@ button {
         top: 0;
         left: 0;
         flex-direction: column;
-        margin-left: 400px;
+        margin-left: 100px;
         text-align: center;
     }
+
+    .friends-i {
+        display: none;
+        margin-left: -50px;
+    }
+
 
 
 
